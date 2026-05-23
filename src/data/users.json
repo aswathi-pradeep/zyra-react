@@ -1,0 +1,43 @@
+{
+  "users": [
+    {
+      "id": "a7d9",
+      "name": "anu",
+      "email": "anu@gmail.com",
+      "phone": "9999999999",
+      "password": "anu@123"
+    },
+    {
+      "id": "2f9a",
+      "name": "aswathi",
+      "email": "aswathi@gmail.com",
+      "phone": "9877878787",
+      "password": "123456",
+      "confirmpassword": "123456"
+    },
+    {
+      "id": "ff27",
+      "name": "amar",
+      "email": "amar@gmail.com",
+      "phone": "9999999999",
+      "password": "amar@123",
+      "confirmpassword": "amar@123"
+    },
+    {
+      "id": "16e3",
+      "name": "anna",
+      "email": "anna@gmail.com",
+      "phone": "8976554433",
+      "password": "anna@123",
+      "confirmpassword": "anna@123"
+    },
+    {
+      "id": "3465",
+      "name": "devika",
+      "email": "devika@gmail.com",
+      "phone": "9988776655",
+      "password": "devika@123",
+      "confirmpassword": "devika@123"
+    }
+  ]
+}

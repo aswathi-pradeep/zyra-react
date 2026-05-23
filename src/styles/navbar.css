@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =======================
+   NAVBAR WRAPPER
+======================= */
+
+/* Default transition */
+.navbar-wrapper {
+    width: 100%;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+/* WOMEN – lavender theme */
+.navbar-wrapper.women-theme {
+  background-color:#FFF8F5;
+ 
+ color: #2B2B2B;
+}
+
+/* MEN – black theme */
+.navbar-wrapper.men-theme {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Make sure text/icons stay visible */
+.navbar-wrapper.men-theme .nav-icon,
+.navbar-wrapper.men-theme .logo,
+.navbar-wrapper.men-theme a,
+.navbar-wrapper.men-theme button,
+.navbar-wrapper.men-theme span {
+  color: #ffffff;
+}
+.navbar-wrapper.women-theme .dropdown {
+  background-color: #ffffff;
+  color: #2b2b2b;
+  border: 1px solid #d6c9ff;
+}
+
+.navbar-wrapper.women-theme .dropdown a,
+.navbar-wrapper.women-theme .dropdown button {
+  color: #2b2b2b;
+}
+
+.navbar-wrapper.women-theme .dropdown a:hover,
+.navbar-wrapper.women-theme .dropdown button:hover {
+  background-color: #f0e9ff;
+}
+
+
+.navbar-wrapper.men-theme .dropdown {
+  background-color: #1a1a1a;   /* dark but not pure black */
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+.navbar-wrapper.men-theme .dropdown a,
+.navbar-wrapper.men-theme .dropdown button {
+  color: #ffffff;
+}
+
+.navbar-wrapper.men-theme .dropdown a:hover,
+.navbar-wrapper.men-theme .dropdown button:hover {
+  background-color: #2a2a2a;
+}
+
+
+.navbar-wrapper.women-theme .nav-icon,
+.navbar-wrapper.women-theme .logo,
+.navbar-wrapper.women-theme a,
+.navbar-wrapper.women-theme button,
+.navbar-wrapper.women-theme span {
+  color: #2b2b2b;
+}
+
+/* Category buttons */
+.navbar-wrapper.men-theme .navbar-lists button {
+  color: #ffffff;
+}
+
+.navbar-wrapper.women-theme .navbar-lists button {
+  color: #2b2b2b;
+}
+
+/* Active category */
+.navbar-lists button.active {
+  font-weight: 600;
+  border-bottom: 2px solid currentColor;
+}
+
+
+/* =======================
+   MAIN NAVBAR
+======================= */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* =======================
+   SEARCH BAR
+======================= */
+.search-box {
+  flex: 1;
+  max-width: 500px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box input:focus {
+  border-color: #000;
+}
+
+/* =======================
+   RIGHT ICONS
+======================= */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ICON WRAPPER (IMPORTANT) */
+.nav-icon {
+  position: relative;          /* 🔑 Anchor for badges */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ICON SIZE */
+.nav-icon svg {
+  font-size: 20px;
+}
+
+/* ICON BUTTON */
+.nav-icon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.navbar-lists button.active {
+  background-color: grey; /* any highlight color you want */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* ACCOUNT TEXT */
+.account span {
+  font-size: 13px;
+}
+
+/* =======================
+   BADGES (CART + WISHLIST)
+======================= */
+.badge,
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+
+  background: crimson;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+}
+
+/* =======================
+   DROPDOWNS
+======================= */
+.dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  min-width: 160px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.dropdown a,
+.dropdown button {
+  padding: 12px 14px;
+  font-size: 14px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background: #f5f5f5;
+}
+
+/* =======================
+   CATEGORY LIST
+======================= */
+.navbar-lists {
+  margin-top: 20px;
+}
+
+.navbar-lists ul {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  padding: 14px 10px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar-lists li {
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.navbar-lists li:hover {
+  text-decoration: underline;
+}
+
+.navbar-lists button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+/* ACTIVE CATEGORY */
+.active {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+/* =======================
+   GENDER SWITCH
+======================= */
+.theme {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.theme span {
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+.desktop-only {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 14px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .search-box {
+    max-width: 160px;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+    flex-direction: column;
+  }
+}
