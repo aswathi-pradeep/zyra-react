@@ -12,7 +12,7 @@ import ProtectedRoute from "./components/ProtectedRoute"
 import Wishlist from "./pages/WishList"
 import NavbarContext from "./context/NavbarContext"
 import About from "./pages/About"
-import Checkout from "./pages/checkout"
+import Checkout from "./pages/Checkout"
 function App() {
  
   const [showLogin, setShowLogin] = useState(false);
